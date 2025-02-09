@@ -15,6 +15,10 @@ app.use('/users', usersRoutes);
 
 app.use('/products', productsRouter);
 
+app.get("/", (request, response)=>{
+    return response.send("Cant get");
+});
+
 app.listen(port, ()=>{
     console.log(`Server Running at Port Number  ${port}`);
     mongooseDb();
